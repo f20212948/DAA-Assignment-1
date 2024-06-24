@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirkpatrick–Seidel Convex Hull Algorithm Documentation</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    h2 {
+        color: #007bff;
+    }
+
+    p {
+        line-height: 1.6;
+        color: #666;
+    }
+
+    .function {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+</style>
+<body>
+    <h1>Kirkpatrick–Seidel Convex Hull Algorithm Documentation</h1>
+    <div class="function">
+    <h2>Point</h2>
+    <p>Named tuple representing a point in 2D space with x and y coordinates.</p>
+        </div>
+    <h2>Functions:</h2>
+
+    <h3>flipped(points)</h3>
+    <p>
+        This function takes a list of points and returns a new list where each point's y-coordinate is negated.
+        It's used to transform points for intermediate calculations.
+    </p>
+
+    <h3>quickselect(ls, index, lo=0, hi=None, depth=0)</h3>
+    <p>
+        Quickselect is a selection algorithm to find the kth smallest element in an unordered list.
+        This implementation selects a pivot randomly and partitions the list around the pivot,
+        narrowing down the search space recursively until the desired element is found.
+        It's used in the algorithm for median finding and bridge computation.
+    </p>
+
+    <h3>bridge(points, vertical_line)</h3>
+    <p>
+        The bridge function finds the convex hull's bridge between two sets of points divided by a vertical line.
+        It calculates the median slope of lines connecting pairs of points and uses this information to determine
+        the leftmost and rightmost points that contribute to the bridge.
+        This helps in dividing the problem of finding the convex hull recursively.
+    </p>
+
+    <h3>connect(lower, upper, points)</h3>
+    <p>
+        This function recursively connects the upper and lower hulls found by the bridge function.
+        It takes the leftmost and rightmost points of the bridge along with the set of points and divides
+        the points into two sets based on their position relative to the bridge.
+        It then recursively connects the points on each side until the convex hull is formed.
+    </p>
+
+    <h3>upper_hull(points)</h3>
+    <p>
+        The upper_hull function finds the upper hull of the given set of points.
+        It first identifies the leftmost and rightmost points, then selects all the points lying between them.
+        Finally, it calls the connect function to connect these points and form the upper hull.
+    </p>
+
+    <h3>convex_hull(points)</h3>
+    <p>
+        This function combines the upper and lower hulls to form the complete convex hull.
+        It takes the upper hull generated from the upper_hull function and the flipped version of the upper hull
+        generated from the upper_hull function with flipped points.
+        It concatenates these two hulls to create the final convex hull.
+    </p>
+
+    <h3>kirkpatrickseidel(a)</h3>
+    <p>
+        This is the main function implementing the Kirkpatrick–Seidel algorithm to find the convex hull.
+        It takes a list of points, transforms them into Point objects, and then proceeds to find the convex hull
+        using the aforementioned functions.
+        The final convex hull is returned as a list of Point objects.
+    </p>
+
+    <script>
+        // Optional: You can include JavaScript for interactivity or styling if needed.
+    </script>
+</body>
+</html>

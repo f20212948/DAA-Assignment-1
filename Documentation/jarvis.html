@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jarvis March Convex Hull Algorithm Documentation</title>
+        </head>
+<body>
+    
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .function {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+<body>
+    <h1>Jarvis March Convex Hull Algorithm Documentation</h1>
+
+    <div class="function">
+        <h2>Point class</h2>
+        <p>This class represents a point in 2D space with x and y coordinates.</p>
+    </div>
+
+  
+        <h3>Left_index(points)</h3>
+        <p>
+            Finds the leftmost point in a list of points.
+        </p>
+    </div>
+
+        <h3>orientation(p, q, r)</h3>
+        <p>
+            Determines the orientation of an ordered triplet (p, q, r).
+            It returns:
+            <ul>
+                <li>0 if p, q, and r are collinear</li>
+                <li>1 if they are clockwise</li>
+                <li>2 if they are counterclockwise</li>
+            </ul>
+        </p>
+    </div>
+
+        <h3>convexHull(points, n)</h3>
+        <p>
+            Computes the convex hull of a set of points using the Jarvis March algorithm.
+            It starts from the leftmost point and iteratively finds the next point on the hull.
+            This function returns the convex hull as a list of coordinates.
+        </p>
+    </div>
+
+        <h3>Jarvis(a)</h3>
+        <p>
+            Main function implementing the Jarvis March algorithm to find the convex hull.
+            It takes a list of points, transforms them into Point objects, and then computes the convex hull
+            using the convexHull function.
+            The final convex hull is returned as a list of coordinates.
+        </p>
+    </div>
+
+   
+
+
+
+</body>
+</html>

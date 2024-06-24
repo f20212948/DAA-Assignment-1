@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis March Visualization</title>
+
+
+    <!-- <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.2/core.css" /> -->
+    <!-- <script type="module" src="https://pyscript.net/releases/2023.11.2/core.js"></script> -->
+
+</head>
+
+
+
+<body>
+    <div id="me" class="centre">
+    <canvas id="canvas" width="600" height="600" bg = "black"></canvas>
+    <button id="visual" onclick="startVisualization()">Start Visualization</button>
+    <button id="reset" onclick="reset()">Reset</button>
+    
+    
+    
+
+    <input type="text" id="points" placeholder="Enter no of points">
+
+
+    <button id="random" onclick="randompoints()">Random</button>
+
+    
+
+    <select name="algo" id="whichhull" required>
+        <option value="both">
+            Both
+        </option>
+        <option value="jarvis">
+            Jarvis March
+        </option>
+        <option value="kps">
+            KPS
+        </option>
+
+        
+    </select>
+
+    </div>
+    
+    <style>
+        #me{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        #canvas {
+            border: 1px solid black;
+            margin: 0;
+            display: block;
+            background-color: black;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/js">
+            export FLASK_APP = app.py 
+            export FLASK_ENV = development 
+            flask run 
+    </script>
+</body>
+
+</html> 
